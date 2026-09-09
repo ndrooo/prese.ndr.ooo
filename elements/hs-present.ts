@@ -53,6 +53,9 @@ export default class HyperslidePresenter extends HTMLElement {
 
   keyEvent(event: KeyboardEvent) {
     const { key } = event;
+    if (event.ctrlKey || event.metaKey || event.altKey) {
+      return;
+    }
     if (key === "ArrowRight" || key === "j" || key === "l") {
       this.advance();
       event.preventDefault();
