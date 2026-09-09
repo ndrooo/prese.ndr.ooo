@@ -1,13 +1,19 @@
+:root {
+    --bg: #0a0a0a;
+    --fg: #ccc;
+    --acc: hsl(170 26 43);
+}
+
 body {
-    background-color: black;
-    color: white;
+    background-color: var(--bg);
+    color: var(--fg);
     a {
-        color: darkcyan;
+        color: var(--acc);
     }
 }
 
 header, main {
-    max-width: 60ch;
+    max-width: calc(700px + 1rem);
     margin-inline: auto;
 }
 
@@ -19,14 +25,14 @@ ul {
         minmax(min(350px, 100%), 1fr)
     );
     padding: 0;
-    position: relative;
     
     li {
+        position: relative;
         display: flex;
         list-style: none;
         height: 250px;
         max-width: 350px;
-        border: 3px solid white;
+        border: 3px solid var(--fg);
         align-items: center;
         justify-content: center;
         font-size: 1.25rem;
@@ -45,11 +51,11 @@ ul {
         }
     }
 
-    &:is(:hover, :has(a:focus-visible)) li {
-        background-color: white;
-        color: black;
+    li:is(:hover, :has(a:focus-visible)) {
+        background-color: var(--fg);
+        color: var(--bg);
         a {
-            color: black;
+            color: var(--bg);
         }
     }
 }
