@@ -23,16 +23,77 @@ export default class HyperslidePresenter extends HTMLElement {
       ).body.children;
     let footer = html`<footer>
       <button class="restart" aria-label="Restart presentation">
-        <inline-svg src="/static/rotate-ccw.svg"></inline-svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-rotate-ccw-icon lucide-rotate-ccw"
+        >
+          <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+          <path d="M3 3v5h5" />
+        </svg>
       </button>
       <button class="prev" aria-label="Previous slide">
-        <inline-svg src="/static/step-back.svg"></inline-svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-step-back-icon lucide-step-back"
+        >
+          <path
+            d="M13.971 4.285A2 2 0 0 1 17 6v12a2 2 0 0 1-3.029 1.715l-9.997-5.998a2 2 0 0 1-.003-3.432z"
+          />
+          <path d="M21 20V4" />
+        </svg>
       </button>
       <button class="next" aria-label="Next slide">
-        <inline-svg src="/static/step-forward.svg"></inline-svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-step-forward-icon lucide-step-forward"
+        >
+          <path
+            d="M10.029 4.285A2 2 0 0 0 7 6v12a2 2 0 0 0 3.029 1.715l9.997-5.998a2 2 0 0 0 .003-3.432z"
+          />
+          <path d="M3 4v16" />
+        </svg>
       </button>
       <button class="source" aria-label="Toggle source">
-        <inline-svg src="/static/code-xml.svg"></inline-svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-code-xml-icon lucide-code-xml"
+        >
+          <path d="m18 16 4-4-4-4" />
+          <path d="m6 8-4 4 4 4" />
+          <path d="m14.5 4-5 16" />
+        </svg>
       </button>
       <span class="slide-number"></span>
     </footer>`[0];
