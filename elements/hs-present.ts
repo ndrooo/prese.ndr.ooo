@@ -1,5 +1,4 @@
 import HyperslideSlide from "./hs-slide";
-import "./inline-svg";
 
 export default class HyperslidePresenter extends HTMLElement {
   activeSlide = Number(this.getAttribute("active-slide"));
