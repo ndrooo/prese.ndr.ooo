@@ -5,7 +5,7 @@ export default class Circle extends Draw2dElement {
   diameter: number = Number(this.getAttribute("d"));
 
   static {
-    this.define();
+    customElements.define("p5-circle", this);
   }
 
   draw(p: p5) {

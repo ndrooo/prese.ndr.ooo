@@ -1,10 +1,6 @@
 import p5 from "p5";
 
 export default class P5MLElement extends HTMLElement {
-  static define() {
-    customElements.define(`p5-${this.name.toLowerCase()}`, this);
-  }
-
   static isP5(element: Element) {
     return element.tagName.toLowerCase().startsWith("p5-");
   }

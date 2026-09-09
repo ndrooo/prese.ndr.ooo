@@ -6,7 +6,7 @@ export default class Rect extends Draw2dElement {
   height: number = Number(this.getAttribute("h"));
 
   static {
-    this.define();
+    customElements.define("p5-rect", this);
   }
 
   draw(p: p5) {

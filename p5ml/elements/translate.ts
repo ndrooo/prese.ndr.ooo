@@ -7,7 +7,7 @@ export default class Translate extends Transform2dElement {
   static observedAttributes = ["x", "y"];
 
   static {
-    this.define();
+    customElements.define("p5-translate", this);
   }
 
   draw(p: p5) {

@@ -6,7 +6,7 @@ export default class Ellipse extends Draw2dElement {
   height: number = Number(this.getAttribute("h"));
 
   static {
-    this.define();
+    customElements.define("p5-ellipse", this);
   }
 
   draw(p: p5) {

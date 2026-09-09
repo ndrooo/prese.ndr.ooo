@@ -7,7 +7,7 @@ export default class Scale extends Transform2dElement {
   static observedAttributes = ["x", "y"];
 
   static {
-    this.define();
+    customElements.define("p5-scale", this);
   }
 
   draw(p: p5) {

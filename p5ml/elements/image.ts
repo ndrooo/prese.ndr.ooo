@@ -9,7 +9,7 @@ export default class Image extends P5MLElement {
   static observedAttributes = ["src"];
 
   static {
-    this.define();
+    customElements.define("p5-image", this);
   }
 
   attributeChangedCallback(name: string, oldVal: string, newVal: string) {

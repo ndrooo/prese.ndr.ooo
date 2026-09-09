@@ -10,7 +10,7 @@ export default class Canvas extends P5MLElement {
   p5instance: p5 | null = null;
 
   static {
-    this.define();
+    customElements.define("p5-canvas", this);
   }
 
   connectedCallback() {

@@ -7,7 +7,7 @@ export default class Text extends Draw2dElement {
   static observedAttributes = ["src"];
 
   static {
-    this.define();
+    customElements.define("p5-text", this);
   }
 
   connectedCallback() {

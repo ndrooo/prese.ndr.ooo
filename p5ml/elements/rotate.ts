@@ -6,7 +6,7 @@ export default class Rotate extends Transform2dElement {
   static observedAttributes = ["angle"];
 
   static {
-    this.define();
+    customElements.define("p5-rotate", this);
   }
 
   draw(p: p5) {
