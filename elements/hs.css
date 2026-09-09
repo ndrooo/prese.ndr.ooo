@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+}
+
+hs-presentation {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+
+    footer {
+        position: fixed;
+        inset-block-end: 0;
+        background-color: black;
+        inline-size: 100%;
+        border-block-start: 3px solid white;
+
+        button {
+            background: none;
+            color: white;
+            border: 2px solid white;
+            border-radius: 4px;
+            padding: 0.5rem;
+            margin: 0.5rem;
+            cursor: pointer;
+            &:disabled {
+                color: grey;
+            }
+
+            svg {
+                display: block;
+            }
+
+            &[aria-pressed="true"] {
+                background-color: white;
+                color: black;
+            }
+        }
+    }
+}
+
+hs-presentation.scripted hs-slide {
+    display: none;
+    min-height: 100%;
+
+    &.active {
+        display: flex;
+    }
+}
+
+hs-slide {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 4rem;
+    flex-flow: row nowrap;
+
+    > * {
+        flex: 1;
+    }
+
+    .content {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    pre.source {
+        padding-inline-start: 2rem;
+        font-size: 1.25rem;
+        max-width: 50%;
+        border-left: 1px solid white;
+        overflow-x: scroll;
+    }
+}

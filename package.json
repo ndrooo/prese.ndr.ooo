@@ -1,0 +1,28 @@
+{
+  "name": "prese.ndr.ooo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "npx @11ty/eleventy --serve",
+    "dev": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@11ty/eleventy-plugin-vite": "^8.0.0",
+    "@types/alpinejs": "^3.13.11",
+    "@types/p5": "^1.7.7",
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.6",
+    "@11ty/eleventy-img": "^7.0.0",
+    "alpinejs": "^3.15.12",
+    "lucide": "^1.28.0",
+    "p5": "^2.3.1"
+  }
+}

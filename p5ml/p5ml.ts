@@ -1,0 +1,9 @@
+import "./elements/canvas.ts";
+import "./elements/rect.ts";
+import "./elements/circle.ts";
+import "./elements/ellipse.ts";
+import "./elements/translate.ts";
+import "./elements/rotate.ts";
+import "./elements/image.ts";
+import "./elements/text.ts";
+import "./elements/scale.ts";

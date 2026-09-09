@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Fun with &lt;custom-elements&gt;</title>
+        <link rel="stylesheet" href="./style.css" />
+        <link rel="stylesheet" href="/elements/hs.css" />
+    </head>
+    <body>
+        <hs-presentation active-slide="0">
+            <hs-slide class="cover">
+                <mouse-color>
+                    <h1>Fun with &lt;custom-elements&gt;</h1>
+                </mouse-color>
+                <p>
+                    Andrew Sherman (he/him) -
+                    <a href="https://a.ndr.ooo">a.ndr.ooo</a>
+                </p>
+            </hs-slide>
+            <hs-slide>
+                <h2>What's a custom element?</h2>
+                <ul>
+                    <li>
+                        Web frameworks have had "components" for modularization
+                        for a long time
+                    </li>
+                    <li>From 2018-2019, standardized Web Components API!</li>
+                    <li>
+                        Three parts
+                        <ul>
+                            <li><s>HTML templates</s></li>
+                            <li><s>Shadow DOM (spooky)</s></li>
+                            <li>Custom elements</li>
+                        </ul>
+                    </li>
+                </ul>
+            </hs-slide>
+            <hs-slide source="true">
+                <h2>Composable, declarative behaviors</h2>
+                <p>
+                    Here's a
+                    <button>
+                        button with
+                        <strong>bold <em>text</em></strong>
+                    </button>
+                </p>
+                <p>
+                    Custom elements have a hyphen:
+                    <code>&lt;my-element&gt;</code>
+                </p>
+                <p>
+                    We can handle attribute updates:
+                    <code>&lt;my-element instant="update"&gt;</code>
+                </p>
+            </hs-slide>
+            <hs-slide>
+                <h2 class="flexible">They're flexible</h2>
+                <p>Because they just use tags and attributes!</p>
+                <p>
+                    Vanilla JS:
+                    <code
+                        >document.getElementsByTag("my-element")[0].setAttribute("is-cool",
+                        coolness)</code
+                    >
+                </p>
+                <p>
+                    AlpineJS:
+                    <code
+                        >&lt;my-element
+                        :is-cool="coolness"&gt;&lt;/my-element&gt;</code
+                    >
+                </p>
+                <p>
+                    React:
+                    <code
+                        >return (&lt;my-element
+                        is-cool={coolness}&gt;&lt;/my-element&gt;);</code
+                    >
+                </p>
+                <p>
+                    Jinja:
+                    <code
+                        >&lt;my-element
+                        is-cool="{{coolness}}"&gt;&lt;/my-element&gt;</code
+                    >
+                </p>
+                <p>
+                    Control built-in elements or
+                    <strong>anything Javascript can touch</strong>
+                </p>
+            </hs-slide>
+            <hs-slide source="true">
+                <h3>Here's a rectangle</h3>
+                <p>(In P5ML)</p>
+                <p5-canvas width="400" height="400">
+                    <p5-translate x="150" y="100">
+                        <p5-rect w="100" h="200"></p5-rect>
+                    </p5-translate>
+                </p5-canvas>
+            </hs-slide>
+            <hs-slide source="true">
+                <h3>Here's a spinning rectangle</h3>
+                <p>(In P5ML)</p>
+                <p5-canvas width="400" height="400">
+                    <p5-translate x="200" y="200">
+                        <spin-thing speed="0.05">
+                            <p5-translate x="-50" y="-100">
+                                <p5-rect w="100" h="200"></p5-rect>
+                            </p5-translate>
+                        </spin-thing>
+                    </p5-translate>
+                </p5-canvas>
+                <p>
+                    Note the <code>&lt;spin-thing&gt;</code> - custom element
+                    that emits a wrapping <code>&lt;p5-rotate&gt;</code>
+                </p>
+            </hs-slide>
+            <hs-slide source="true">
+                <h3>Here's a wiggling rectangle</h3>
+                <p>(In P5ML)</p>
+                <p5-canvas width="400" height="400">
+                    <p5-translate x="150" y="100">
+                        <wiggle-it wiggle-factor="80">
+                            <p5-rect w="100" h="200"></p5-rect>
+                        </wiggle-it>
+                    </p5-translate>
+                </p5-canvas>
+            </hs-slide>
+            <hs-slide source="true">
+                <h3>Here's a really wild rectangle</h3>
+                <p>(In P5ML)</p>
+                <p5-canvas width="400" height="400">
+                    <p5-translate x="150" y="150">
+                        <wiggle-it wiggle-factor="160">
+                            <spin-thing speed="-0.005">
+                                <p5-translate x="-50" y="-100">
+                                    <p5-rect
+                                        class="wild"
+                                        w="100"
+                                        h="200"
+                                    ></p5-rect>
+                                    <p5-translate x="20" y="30">
+                                        <p5-circle d="20"></p5-circle>
+                                    </p5-translate>
+                                    <p5-translate x="80" y="30">
+                                        <p5-circle d="20"></p5-circle>
+                                    </p5-translate>
+                                    <p5-translate x="50" y="70">
+                                        <p5-circle d="60"></p5-circle>
+                                    </p5-translate>
+                                    <p5-translate x="110" y="70">
+                                        <p5-text>WOAH NELLY</p5-text>
+                                    </p5-translate>
+                                </p5-translate>
+                            </spin-thing>
+                        </wiggle-it>
+                    </p5-translate>
+                </p5-canvas>
+            </hs-slide>
+            <hs-slide>
+                <h2>They made this presentation :)</h2>
+                <p>
+                    <a href="https://prese.ndr.ooo/cel-fun"
+                        >prese.ndr.ooo/cel-fun</a
+                    >
+                </p>
+                <img
+                    src="./meta.png"
+                    alt="Code showing a collection of <hs-present> and <hs-slide> tags comprising this presentation"
+                />
+            </hs-slide>
+        </hs-presentation>
+        <script type="module" src="/p5ml/p5ml.ts"></script>
+        <script type="module" src="/elements/hs-slide.ts"></script>
+        <script type="module" src="/elements/hs-present.ts"></script>
+        <script type="module" src="./spin-thing.js"></script>
+        <script type="module" src="./wiggle-it.js"></script>
+        <script type="module" src="./mouse-color.js"></script>
+    </body>
+</html>

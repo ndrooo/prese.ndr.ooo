@@ -1,0 +1,101 @@
+@font-face {
+    font-family: "Fraunces";
+    font-style: normal;
+    font-display: swap;
+    src: local(""), url("/static/Fraunces-SOFT\,WONK\,opsz\,wght.ttf");
+}
+
+@font-face {
+    font-family: "Fraunces";
+    font-style: italic;
+    font-display: swap;
+    src: local(""), url("/static/Fraunces-Italic-SOFT\,WONK\,opsz\,wght.ttf");
+}
+
+:root {
+    font-family: "Fraunces", serif;
+
+    --background: #0a0a0a;
+    --surface: #222;
+    --surface-darker: #000;
+    --foreground: #ccc;
+    --link: #999;
+    --accent: #3a625b;
+    --heading: hsl(170, 26%, 43%);
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--foreground);
+}
+
+a {
+    color: var(--heading);
+}
+
+@keyframes flexAnimation {
+    0% {
+        transform: skew(5deg, 5deg);
+    }
+    50% {
+        transform: skew(-5deg, -5deg);
+    }
+    100% {
+        transform: skew(5deg, 5deg);
+    }
+}
+.flexible {
+    transform: skew(5deg, 5deg);
+    width: fit-content;
+    animation-name: flexAnimation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.top-hug {
+    position: fixed;
+    bottom: 36px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+hs-slide.cover .content {
+    display: flex;
+    flex-flow: column nowrap;
+
+    > * {
+        margin-block: 2rem;
+        margin-inline: auto;
+    }
+
+    mouse-color {
+        margin-block: auto;
+    }
+}
+
+p5-canvas {
+    background: rgb(from var(--background) r g b / 0.3);
+}
+
+p5-rect {
+    color: var(--foreground);
+    background: rgba(from var(--foreground) r g b / 0.2);
+
+    &.wild {
+        color: red;
+    }
+}
+
+p5-circle {
+    color: var(--foreground);
+    background: var(--background);
+}
+
+li {
+    margin-block: 1.5rem;
+}
